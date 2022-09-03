@@ -13,7 +13,8 @@ $conexion = conectar();
     <link href="css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-image: url('restaurant.jpg');
+  background-repeat: no-repeat;">
         <div class="container mt-5">
                 <div class="row">                     
                     <div class="col-md-8">
@@ -39,7 +40,7 @@ $conexion = conectar();
                         if(isset($_GET['opcion'])){
                     ?>
                     <div class="col-md-8">
-                        <table class="table" >
+                        <table class="table table-hover" >
                             <thead class="table-success table-striped" >
                                 <tr>
                                     <th>id</th>
@@ -73,9 +74,9 @@ $conexion = conectar();
                                     ?>                                        
                                         <tr>
                                             <td><?php  echo $row['id']?></th>
-                                            <td><?php  echo $row['nombre']?></th>
-                                            <td><?php  echo $row['opcion']?></th>
-                                            <td><?php  echo $row['precio']?></th>   
+                                            <td style="color:white;"><?php  echo $row['nombre']?></th>
+                                            <td style="color:white;"><?php  echo $row['opcion']?></th>
+                                            <td style="color:white; font-weight:bold"><?php  echo $row['precio']?></th>   
                                             
                                             <!--botón editar, que pasa al archivo update.php por url, el id del registro a editar -->
                                             <td><a href="actualizar.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a></th>

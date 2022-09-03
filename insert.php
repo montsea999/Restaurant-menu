@@ -22,7 +22,7 @@ $precio=null;
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         
     </head>
-    <body>
+    <body style="background-image: url('restaurant.jpg'); background-repeat: no-repeat;">
 <br><br>
 <div class="container mt-5">
 <!-- **** Formulario para insertar un nuevo plato ******** -->
@@ -57,8 +57,6 @@ If(isset($_POST['id'])){
     // consulta de inserción e inserción del nuevo registro en la tabla menu de la base de datos pizza_ilerna.sql
     $sql="INSERT INTO pizza_ilerna.menu (nombre, opcion, precio) VALUES('$nombre', '$opcion', $precio)";
     $query= mysqli_query($conexion,$sql);
-
-
 ?>
     </body>
 </html>

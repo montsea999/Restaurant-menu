@@ -15,5 +15,6 @@ $query=mysqli_query($conexion,$sql);
     if(!$query){
         echo "no se ha podido eliminar el registro indicado";       
     }
+    
 ?>
 
