@@ -57,6 +57,9 @@ If(isset($_POST['id'])){
     // consulta de inserción e inserción del nuevo registro en la tabla menu de la base de datos pizza_ilerna.sql
     $sql="INSERT INTO pizza_ilerna.menu (nombre, opcion, precio) VALUES('$nombre', '$opcion', $precio)";
     $query= mysqli_query($conexion,$sql);
+    if($query){
+        Header("Location: index.php");
+    }
 ?>
     </body>
 </html>
